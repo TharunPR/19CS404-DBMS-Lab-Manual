@@ -296,5 +296,9 @@ ALTER TABLE customer ADD birth_date timestamp;
 
 ![image](https://github.com/user-attachments/assets/9c1dd310-e28a-4726-9d3f-43d822aa7135)
 
+**MODULE-1 GRADE**
+
+![image](https://github.com/user-attachments/assets/bcf28330-d708-40e2-9dd8-b929ff92f580)
+
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
