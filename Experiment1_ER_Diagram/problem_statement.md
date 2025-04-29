@@ -45,28 +45,72 @@ Design a database for patient management, appointments, medical records, and bil
    - Why you chose the entities and relationships.
    - How you modeled prerequisites or billing.
 
-# ER Diagram Submission - Student Name
+# ER Diagram Submission - THARUN P R
 
 ## Scenario Chosen:
-University / Hospital (choose one)
+
+University 
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+
+![ERD_DBMS_page-0001](https://github.com/user-attachments/assets/153a0b87-0d3e-49ba-a1aa-280637bcc7d0)
 
 ## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
-...
 
+- **DEPARTMENT**:  
+  - department_id  
+  - department_name  
+  - hod  
+  - curriculum  
+  - no. of students  
+  - no. of faculties  
+
+- **COURSE**:  
+  - course_id  
+  - course_name  
+  - pre-requisite  
+  - course_type  
+  - no. of credits  
+  - offered_department  
+
+- **INSTRUCTOR**:  
+  - instructor_id  
+  - instructor_name  
+  - department  
+  - email  
+  - experience  
+  - designation  
+
+- **STUDENT**:  
+  - name  
+  - reg no  
+  - email  
+  - department  
+  - batch  
+  - dob  
+  - age
+ 
 ## Relationships and Constraints:
-- Relationship1 (Cardinality, Participation)
-- Relationship2 (Cardinality, Participation)
-...
+
+- **Teaches** (1:N, Total Participation)  
+- **BelongsTo** (1:N, Total Participation)  
+- **Offers** (1:N, Total Participation)  
+- **Enrolls** (M:N, Partial Participation)  
 
 ## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
+- **Prerequisite**:  
+  - In the **COURSE** table, the **pre-requisite** attribute is used to store the **course_id** of the course that must be completed before enrolling in the current course. This creates a self-referential relationship within the **COURSE** table.
 
 ## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
 
+- **Brief Explanation**:  
+  - **Entities**: The entities were chosen to represent the core components of an academic system: **Department**, **Course**, **Instructor**, and **Student**.
+  - **Relationships**: The relationships were based on common academic structures where:
+    - **Instructors** teach **Courses**.
+    - **Departments** have **Instructors** and **Courses**.
+    - **Students** enroll in **Courses**.
+  - **Assumptions**: Each **Instructor** belongs to one **Department**, and each **Course** is offered by one **Department**. A **Student** can enroll in multiple **Courses**.
+    
 ## RESULT
+
+Hence, the experiment was successfully conducted by modeling an academic system with ER diagrams, capturing relationships between departments, instructors, courses, and students.
